@@ -23,6 +23,13 @@ body {
 .flex {
   display: flex;
 }
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
 /* HEADER */
 
 .header {
@@ -63,8 +70,25 @@ body {
 .main {
   height: calc(100% - 50px - 90px);
   background-color: aquamarine;
+  padding: 1rem 0;
 }
 
+.grid {
+  width: 450px;
+  height: 450px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell {
+  width: calc(100% / 10);
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
 /* FOOTER */
 
 .footer {

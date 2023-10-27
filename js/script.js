@@ -26,6 +26,7 @@ selectElem.addEventListener("click", function () {
         cell.addEventListener("click", heandleCell);
         gridElem.append(cell);
       }
+      this.value = "";
       break;
 
     case "medium":
@@ -36,6 +37,7 @@ selectElem.addEventListener("click", function () {
         cell.classList.add("medium");
         gridElem.append(cell);
       }
+      this.value = "";
       break;
 
     case "hard":
@@ -46,6 +48,7 @@ selectElem.addEventListener("click", function () {
         cell.classList.add("hard");
         gridElem.append(cell);
       }
+      this.value = "";
       break;
   }
 });

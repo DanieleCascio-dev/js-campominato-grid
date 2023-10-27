@@ -74,6 +74,6 @@ function generateGridCell(innerNumber) {
  * @returns {any} none
  */
 function heandleCell() {
-  this.classList.add("lightgreen");
+  this.classList.toggle("lightgreen");
   console.log(this.textContent);
 }

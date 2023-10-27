@@ -15,3 +15,26 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 ## Soluzione
 
 1. Preparo html e css
+
+2. Raccolgo i dati:
+
+- button play
+
+3. creo un ciclo for per inserie le celle, una funzione per craere le celle e una fuznione per cambiare il colore delle celle quando ci clicco:
+
+- function generateGridCell(innerNumber) {
+  const newcell = document.createElement("div");
+  newcell.classList.add("cell");
+  newcell.innerHTML = innerNumber;
+  return newcell;
+  }
+
+-function heandleCell (){
+this.classList.add("lightgreen");
+console.log(this.innerHtml);
+}
+
+- for (let i = 0; i < 100; i++){
+  const cell = generateGridCell(i);
+  cell.addEventListener("click", handleCell)
+  }

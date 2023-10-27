@@ -30,6 +30,12 @@ body {
   display: flex;
   justify-content: center;
 }
+
+/* color */
+
+.lightgreen {
+  background-color: lightgreen;
+}
 /* HEADER */
 
 .header {

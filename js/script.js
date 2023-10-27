@@ -1,12 +1,20 @@
 //PROGRAM
 const playElem = document.querySelector(".play-btn");
 console.log(playElem);
+const gridElem = document.querySelector(".grid");
+console.log(gridElem);
 
+//logic
 playElem.addEventListener("click", function () {
-  for (let i = 0; i < 100; i++) {
-    const element = array[i];
+  if (gridElem.innerHTML === "") {
+    for (let i = 1; i <= 100; i++) {
+      const cell = generateGridCell(i);
+      cell.addEventListener("click", heandleCell);
+      gridElem.append(cell);
+    }
   }
 });
+
 //FUNCTION
 
 /**
@@ -23,6 +31,10 @@ function generateGridCell(innerNumber) {
 
 /* **** */
 
+/**
+ * Description add lightgreen class
+ * @returns {any} none
+ */
 function heandleCell() {
   this.classList.add("lightgreen");
   console.log(this.innerHtml);

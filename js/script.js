@@ -37,6 +37,16 @@ selectElem.addEventListener("click", function () {
         gridElem.append(cell);
       }
       break;
+
+    case "hard":
+      gridElem.innerHTML = "";
+      for (let i = 1; i <= 49; i++) {
+        const cell = generateGridCell(i);
+        cell.addEventListener("click", heandleCell);
+        cell.classList.add("hard");
+        gridElem.append(cell);
+      }
+      break;
   }
 });
 

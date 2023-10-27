@@ -99,6 +99,10 @@ body {
 .medium {
   width: calc(100% / 9);
 }
+
+.hard {
+  width: calc(100% / 7);
+}
 /* FOOTER */
 
 .footer {

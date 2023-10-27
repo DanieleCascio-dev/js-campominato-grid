@@ -57,3 +57,19 @@ body {
   display: inline-block;
   padding: 0rem 1.5rem;
 }
+
+/* MAIN */
+
+.main {
+  height: calc(100% - 50px - 90px);
+  background-color: aquamarine;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 1.5rem;
+  height: 50px;
+  width: 100%;
+  background-color: #fff;
+}

@@ -95,6 +95,10 @@ body {
   align-items: center;
   border: 1px solid black;
 }
+
+.medium {
+  width: calc(100% / 9);
+}
 /* FOOTER */
 
 .footer {

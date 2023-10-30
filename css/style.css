@@ -87,6 +87,21 @@ body {
   justify-content: center;
 }
 
+/* @media screen and (min-width: 1400px) {
+  .grid {
+    width: 750px;
+    height: 750px;
+  }
+} */
+
+/* Media query for big screen */
+@media screen and (min-height: 931px) {
+  .grid {
+    width: 750px;
+    height: 750px;
+  }
+}
+
 .cell {
   width: calc(100% / 10);
   aspect-ratio: 1;

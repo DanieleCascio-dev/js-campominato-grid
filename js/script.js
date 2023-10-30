@@ -15,33 +15,17 @@ playElem.addEventListener("click", function () {
     //Easy grid 10x10
     case "easy":
       gridElem.innerHTML = "";
-
       bombs = generateBombs(100);
       maxClick = 100 - bombs.length;
-      /* generateAnyGrid(100, "easy", bombs) */ console.log(bombs);
-      for (let i = 1; i <= 100; i++) {
-        const cell = generateGridCell(i);
-        cell.classList.add("easy");
-
-        cell.addEventListener("click", function () {
-          let control = this.textContent;
-          console.log(bombs.includes(parseInt(control)));
-          if (bombs.includes(parseInt(control))) {
-            this.classList.add("bomb");
-          } else {
-            this.classList.add("lightgreen");
-            console.log(this.textContent);
-          }
-        });
-        gridElem.append(cell);
-      }
+      console.log(bombs);
+      generateAnyGrid(100, "easy");
 
       break;
     // Medium grid 9x9
     case "medium":
       gridElem.innerHTML = "";
       bombs = generateBombs(81);
-      console.log(generateBombs(81));
+      console.log(bombs);
       maxClick = 81 - bombs.length;
       generateAnyGrid(81, "medium");
 
@@ -50,7 +34,7 @@ playElem.addEventListener("click", function () {
     case "hard":
       gridElem.innerHTML = "";
       bombs = generateBombs(49);
-      console.log(generateBombs(49));
+      console.log(bombs);
       maxClick = 49 - bombs.length;
       generateAnyGrid(49, "hard");
 
@@ -59,6 +43,7 @@ playElem.addEventListener("click", function () {
     default:
       gridElem.innerHTML = "";
       bombs = generateBombs(100);
+      console.log(bombs);
       maxClick = 100 - bombs.length;
       generateAnyGrid(100, "easy");
   }
@@ -74,10 +59,11 @@ playElem.addEventListener("click", function () {
  * @param {any} difficulty, the class to add to any cell.
  * @returns {any} Html element, grid with cell.
  */
-function generateAnyGrid(gridLenght, difficulty, explosion) {
+function generateAnyGrid(gridLenght, difficulty) {
   for (let i = 1; i <= gridLenght; i++) {
     const cell = generateGridCell(i);
     cell.classList.add(difficulty);
+    cell.addEventListener("click", heandleCell);
     gridElem.append(cell);
   }
 }
@@ -103,11 +89,13 @@ function generateGridCell(innerNumber) {
  * @returns {any} none
  */
 function heandleCell() {
-  if (bombs.includes(this.textContent) === true) {
+  if (bombs.includes(parseInt(this.textContent))) {
     this.classList.add("bomb");
     console.log(this.textContent);
   } else {
     this.classList.add("lightgreen");
+    clickedCells.push(this.textContent);
+    console.log(clickedCells);
   }
 }
 

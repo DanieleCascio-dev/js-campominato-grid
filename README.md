@@ -44,14 +44,25 @@ console.log(this.innerHtml);
   cell.addEventListener("click", handleCell)
   }
 
-//
-//Array di numeri non bombe cliccate dall'utente per avere il punteggio. Oppure creare un variabile che incrementa ogni volta che clicco su una non bomba.
-/_ MOdifica la funzione HeandleCell {
+  3.6 Modifica la funzione HeandleCell {
+  leggere il numero cliccato
+  if numero.includes(bombe) {
+  cella diventa rossa
+  fine gioco (un'altra funzione) utente perde
+  }
+  else {
+  cella diventa azzurra/verde
+  incremento il mio contatore oppure aggiungo il numero all'array di non bombe SE non già presente
+  if (lunghezza array non bombe = numero massimo consentito) {
+  fine il gioco (funzione) utente vince
+  }}
+
+Modifica la funzione HeandleCell {
 leggere il numero cliccato
 if numero.includes(bombe) {
 cella diventa rossa
 fine gioco (un'altra funzione) utente perde
-}
+}}
 else {
 cella diventa azzurra/verde
 incremento il mio contatore oppure aggiungo il numero all'array di non bombe SE non già presente
@@ -59,5 +70,3 @@ if (lunghezza array non bombe = numero massimo consentito) {
 fine il gioco (funzione) utente vince
 }
 }
-}
-_/

@@ -92,9 +92,13 @@ function heandleCell() {
   if (bombs.includes(parseInt(this.textContent))) {
     this.classList.add("bomb");
     console.log(this.textContent);
+    gameOver();
   } else {
     this.classList.add("lightgreen");
     clickedCells.push(this.textContent);
+    if (clickedCells.length === maxClick) {
+      console.log("Hai vinto!");
+    }
     console.log(clickedCells);
   }
 }
@@ -121,4 +125,13 @@ function generateBombs(max) {
     }
   }
   return result;
+}
+
+/* ************************* */
+
+function gameOver() {
+  const gameOverMess = document.createElement("h2");
+  gameOverMess.innerHTML = `Game over! Hai indovinato ${clickedCells.length} numeri prima di perdere!`;
+  gameOverMess.classList.add("game-over");
+  gridElem.append(gameOverMess);
 }

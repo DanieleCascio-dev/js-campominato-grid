@@ -13,37 +13,24 @@ playElem.addEventListener("click", function () {
     case "easy":
       gridElem.innerHTML = "";
       generateAnyGrid(100, "easy");
-      /* for (let i = 1; i <= 100; i++) {
-        const cell = generateGridCell(i);
-        cell.addEventListener("click", heandleCell);
-        gridElem.append(cell);
-      } */
 
       break;
     // Medium grid 9x9
     case "medium":
       gridElem.innerHTML = "";
       generateAnyGrid(81, "medium");
-      /*  for (let i = 1; i <= 81; i++) {
-        const cell = generateGridCell(i);
-        cell.addEventListener("click", heandleCell);
-        cell.classList.add("medium");
-        gridElem.append(cell);
-      } */
 
       break;
     //Hard grid
     case "hard":
       gridElem.innerHTML = "";
       generateAnyGrid(49, "hard");
-      /* for (let i = 1; i <= 49; i++) {
-        const cell = generateGridCell(i);
-        cell.addEventListener("click", heandleCell);
-        cell.classList.add("hard");
-        gridElem.append(cell);
-      } */
 
       break;
+
+    default:
+      gridElem.innerHTML = "";
+      generateAnyGrid(100, "easy");
   }
 });
 

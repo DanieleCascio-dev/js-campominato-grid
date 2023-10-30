@@ -20,7 +20,12 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 
 - button play
 
-3. creo un ciclo for per inserie le celle, una funzione per craere le celle e una fuznione per cambiare il colore delle celle quando ci clicco:
+3.  3.1 Generare 16 bombe casuali comprese nel range del gioco (usa un array). 100 / 81 / 49.
+    3.2 Definire il numero max di tentativi 100 o 81 o 49 - 16.
+    3.3 Array di numeri non bombe cliccate dall'utente per avere il punteggio. Oppure creare un variabile che incrementa ogni volta che clicco su una non bomba.
+    3.4 creo un ciclo for per inserie le celle,
+    una funzione per craere le celle
+    3.5 e una fuznione per cambiare il colore delle celle quando ci clicco:
 
 - function generateGridCell(innerNumber) {
   const newcell = document.createElement("div");
@@ -38,3 +43,21 @@ console.log(this.innerHtml);
   const cell = generateGridCell(i);
   cell.addEventListener("click", handleCell)
   }
+
+//
+//Array di numeri non bombe cliccate dall'utente per avere il punteggio. Oppure creare un variabile che incrementa ogni volta che clicco su una non bomba.
+/_ MOdifica la funzione HeandleCell {
+leggere il numero cliccato
+if numero.includes(bombe) {
+cella diventa rossa
+fine gioco (un'altra funzione) utente perde
+}
+else {
+cella diventa azzurra/verde
+incremento il mio contatore oppure aggiungo il numero all'array di non bombe SE non già presente
+if (lunghezza array non bombe = numero massimo consentito) {
+fine il gioco (funzione) utente vince
+}
+}
+}
+_/

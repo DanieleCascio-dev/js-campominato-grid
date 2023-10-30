@@ -118,6 +118,10 @@ body {
 .hard {
   width: calc(100% / 7);
 }
+
+.bomb {
+  background-color: red;
+}
 /* FOOTER */
 
 .footer {

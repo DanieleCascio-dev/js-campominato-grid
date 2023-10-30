@@ -9,16 +9,7 @@ console.log(selectElem);
 //logic
 //Normal grid 10x10
 playElem.addEventListener("click", function () {
-  gridElem.innerHTML = "";
-  for (let i = 1; i <= 100; i++) {
-    const cell = generateGridCell(i);
-    cell.addEventListener("click", heandleCell);
-    gridElem.append(cell);
-  }
-});
-
-selectElem.addEventListener("click", function () {
-  switch (this.value) {
+  switch (selectElem.value) {
     case "easy":
       gridElem.innerHTML = "";
       for (let i = 1; i <= 100; i++) {
@@ -26,7 +17,7 @@ selectElem.addEventListener("click", function () {
         cell.addEventListener("click", heandleCell);
         gridElem.append(cell);
       }
-      this.value = "";
+
       break;
 
     case "medium":
@@ -37,7 +28,7 @@ selectElem.addEventListener("click", function () {
         cell.classList.add("medium");
         gridElem.append(cell);
       }
-      this.value = "";
+
       break;
 
     case "hard":
@@ -48,7 +39,7 @@ selectElem.addEventListener("click", function () {
         cell.classList.add("hard");
         gridElem.append(cell);
       }
-      this.value = "";
+
       break;
   }
 });
